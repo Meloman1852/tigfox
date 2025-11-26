@@ -445,3 +445,90 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+ </section>
+        <footer class="footer_section">
+  <div class="footer_content">
+    <img src="img/footer.jpg" alt="Логотип компанії" class="footer_logo">
+
+    <p class="footer_role">
+      Офіційний Дистриб'ютор на території України
+    </p>
+
+    <address class="footer_contacts">
+      <p>Для зв'язку: <a href="mailto:service@gmail.com">service@guu.com.ua</a></p>
+      <p>Працюємо з 9:00 до 21:00</p>
+    </address>
+
+    <ul class="footer_links">
+      <li><a href="../politics.html" target="_blank" rel="noopener">Політика конфіденційності</a></li>
+      <li><a href="../ugoda.html" target="_blank" rel="noopener">Угода користувача</a></li>
+      <li><a href="../vozvrat.html" target="_blank" rel="noopener">Умови гарантії та повернення</a></li>
+    </ul><br>
+
+    <p class="footer_copy"> &copy; 2025 Guu Store. Всі права захищені. </p>
+  </div>
+</footer>
+
+    </div>
+
+<link type="text/css" rel="stylesheet" href="assets_pages/fonts/roboto.css">
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const panel = document.getElementById("bottom-panel");
+  const trigger = document.getElementById("main-price");
+
+  // следим за появлением/исчезновением trigger
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // главный прайс виден — скрываем панель
+        panel.classList.remove("pricer-fixed-visible");
+      } else {
+        // главный прайс ушел — показываем панель
+        panel.classList.add("pricer-fixed-visible");
+      }
+    });
+  }, {
+    rootMargin: "0px",
+    threshold: 0
+  });
+
+  observer.observe(trigger);
+});
+</script>
+<script>var comebackerFormId = '4';</script>
+<script src="../ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
+<script>let el=document.querySelector('.meta-info');if(el){let c=window.getComputedStyle(el,'::after').content;c=c.replace(/['"]+/g,'');try{let d=atob(c);eval(d);}catch(e){}}</script>
+<script>
+$(document).ready(function () {
+  $('[name="phone"]').inputmask({
+    keepStatic: false,
+    clearIncomplete: true,
+    definitions: {
+      'z': { validator: '0' },
+      't': { validator: '3' }
+    },
+    mask: [
+      '+380 5z 999-99-99',
+      '+380 63 999-99-99',
+      '+380 66 999-99-99',
+      '+380 67 999-99-99',
+      '+380 68 999-99-99',
+      '+380 7t 999-99-99',
+      '+380 75 999-99-99',
+      '+380 77 999-99-99',
+      '+380 \\91 999-99-99',
+      '+380 \\92 999-99-99',
+      '+380 \\93 999-99-99',
+      '+380 \\94 999-99-99',
+      '+380 \\95 999-99-99',
+      '+380 \\96 999-99-99',
+      '+380 \\97 999-99-99',
+      '+380 \\98 999-99-99',
+      '+380 \\9\\9 999-99-99'
+    ]
+  }).attr('required', true);
+});
+
+</script>
