@@ -1,64 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Дякуємо за замовлення!</title>
+    <title>Дякуємо за замовлення! 🎄</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background: linear-gradient(to bottom, #d9ecff, #ffffff);
             text-align: center;
-            padding-top: 50px;
+            padding-top: 60px;
+            overflow-x: hidden;
         }
-        .thank-you-message {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+
+        .thank-you-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            width: 90%;
             max-width: 600px;
             margin: 0 auto;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+            position: relative;
+            z-index: 2;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #d62828;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .return-button {
+            margin-top: 25px;
+            padding: 14px 28px;
+            background-color: #2fa74d;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .return-button:hover {
+            background-color: #1d8038;
+        }
+
+        /* ❄️ Сніжинки */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: white;
+            font-size: 20px;
+            opacity: 0.9;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10px); }
+            100% { transform: translateY(110vh); }
         }
     </style>
-    
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1226416175652351');
-fbq('track', 'Lead');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1226416175652351&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-    
+
+    <!-- Facebook Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1226416175652351');
+    fbq('track', 'Lead');
+    </script>
+
 </head>
 <body>
-    <div class="thank-you-message">
-        <h2>Дякуємо за ваше замовлення!</h2>
-        <p>Ми отримали ваше замовлення та незабаром з вами зв'яжемося. Будь ласка, залишайтеся на зв'язку.</p>
-        
-        <p>Слава Україні</p>
+
+    <div class="thank-you-box">
+        <h2>🎄 Дякуємо за замовлення! 🎁</h2>
+        <p>Ваше новорічне замовлення успішно отримано!  
+        Скоро ми з вами звʼяжемося. Гарного передсвяткового настрою!</p>
+
+        <p>Слава Україні 🇺🇦</p>
 
         <button class="return-button" onclick="goBack()">Повернутися на сайт</button>
 
         <script>
             function goBack() {
-                // Вставьте ваш URL вместо https://example.com
-                window.location.href = 'https://meloman1852.github.io/tigfox/';
+                window.location.href = "https://meloman1852.github.io/tigfox/";
             }
         </script>
     </div>
-   
-</body>
 
+    <!-- Генерація сніжинок -->
+    <script>
+    const snowCount = 40;
+
+    for (let i = 0; i < snowCount; i++) {
+        let snow = document.createElement("div");
+        snow.className = "snowflake";
+        snow.innerHTML = "❄";
+
+        snow.style.left = Math.random() * 100 + "vw";
+        snow.style.animationDuration = 3 + Math.random() * 7 + "s";
+        snow.style.fontSize = 12 + Math.random() * 20 + "px";
+        snow.style.animationDelay = Math.random() * 5 + "s";
+
+        document.body.appendChild(snow);
+    }
+    </script>
+
+</body>
 </html>
